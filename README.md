@@ -1,6 +1,7 @@
 # Learning Scala
 ### Currently listing the first 10 of 99 practice problems.
 The full list: <http://aperiodic.net/phil/scala/s-99/>
+
 1. [ ] &nbsp;&nbsp;&nbsp;Find the last element of a list.
 
         last(List(1, 1, 2, 3, 5, 8))
