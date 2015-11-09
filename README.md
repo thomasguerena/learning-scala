@@ -45,44 +45,44 @@ The full list: <http://aperiodic.net/phil/scala/s-99/>
     	res0: List[(Int, Symbol)] = List((4,'a), (1,'b), (2,'c), (2,'a), (1,'d), (4,'e))
 11. [ ] &nbsp;&nbsp;&nbsp;Modified run-length encoding.&nbsp;&nbsp;&nbsp;*Modify the result of problem P10 in such a way that if an element has no duplicates it is simply copied into the result list. Only elements with duplicates are transferred as (N, E) terms.*
 
-    encodeModified(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e))
-    List[Any] = List((4,'a), 'b, (2,'c), (2,'a), 'd, (4,'e))
+        encodeModified(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e))
+        List[Any] = List((4,'a), 'b, (2,'c), (2,'a), 'd, (4,'e))
 12. [ ] &nbsp;&nbsp;&nbsp;Decode a run-length encoded list.&nbsp;&nbsp;&nbsp;*Given a run-length code list generated as specified in problem P10, construct its uncompressed version.*
 
-    decode(List((4, 'a), (1, 'b), (2, 'c), (2, 'a), (1, 'd), (4, 'e)))
-    List[Symbol] = List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)
+        decode(List((4, 'a), (1, 'b), (2, 'c), (2, 'a), (1, 'd), (4, 'e)))
+        List[Symbol] = List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)
 13. [ ] &nbsp;&nbsp;&nbsp;Run-length encoding of a list (direct solution).&nbsp;&nbsp;&nbsp;*Implement the so-called run-length encoding data compression method directly. I.e. don't use other methods you've written (like P09's pack); do all the work directly.*
 
-    encodeDirect(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e))
-    List[(Int, Symbol)] = List((4,'a), (1,'b), (2,'c), (2,'a), (1,'d), (4,'e))
+        encodeDirect(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e))
+        List[(Int, Symbol)] = List((4,'a), (1,'b), (2,'c), (2,'a), (1,'d), (4,'e))
 14. [ ] &nbsp;&nbsp;&nbsp;Duplicate the elements of a list.
 
-    duplicate(List('a, 'b, 'c, 'c, 'd))
-    List[Symbol] = List('a, 'a, 'b, 'b, 'c, 'c, 'c, 'c, 'd, 'd)
+        duplicate(List('a, 'b, 'c, 'c, 'd))
+        List[Symbol] = List('a, 'a, 'b, 'b, 'c, 'c, 'c, 'c, 'd, 'd)
 15. [ ] &nbsp;&nbsp;&nbsp;Duplicate the elements of a list a given number of times.
 
-    duplicateN(3, List('a, 'b, 'c, 'c, 'd))
-    List[Symbol] = List('a, 'a, 'a, 'b, 'b, 'b, 'c, 'c, 'c, 'c, 'c, 'c, 'd, 'd, 'd)
+        duplicateN(3, List('a, 'b, 'c, 'c, 'd))
+        List[Symbol] = List('a, 'a, 'a, 'b, 'b, 'b, 'c, 'c, 'c, 'c, 'c, 'c, 'd, 'd, 'd)
 16. [ ] &nbsp;&nbsp;&nbsp;Drop every Nth element from a list.
 
-    drop(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
-    List[Symbol] = List('a, 'b, 'd, 'e, 'g, 'h, 'j, 'k)
+        drop(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
+        List[Symbol] = List('a, 'b, 'd, 'e, 'g, 'h, 'j, 'k)
 17. [ ] &nbsp;&nbsp;&nbsp;Split a list into two parts.
 
-    split(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
-    (List[Symbol], List[Symbol]) = (List('a, 'b, 'c),List('d, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
+        split(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
+        (List[Symbol], List[Symbol]) = (List('a, 'b, 'c),List('d, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
 18. [ ] &nbsp;&nbsp;&nbsp;Extract a slice from a list.&nbsp;&nbsp;&nbsp;*Given two indices, I and K, the slice is the list containing the elements from and including the Ith element up to but not including the Kth element of the original list. Start counting the elements with 0.*
 
-    slice(3, 7, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
-    List[Symbol] = List('d, 'e, 'f, 'g)
+        slice(3, 7, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
+        List[Symbol] = List('d, 'e, 'f, 'g)
 19. [ ] &nbsp;&nbsp;&nbsp;Rotate a list N places to the left.
 
-    rotate(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
-    List[Symbol] = List('d, 'e, 'f, 'g, 'h, 'i, 'j, 'k, 'a, 'b, 'c)
+        rotate(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
+        List[Symbol] = List('d, 'e, 'f, 'g, 'h, 'i, 'j, 'k, 'a, 'b, 'c)
 
-    rotate(-2, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
-    List[Symbol] = List('j, 'k, 'a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i)
+        rotate(-2, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
+        List[Symbol] = List('j, 'k, 'a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i)
 20. [ ] &nbsp;&nbsp;&nbsp;Remove the Kth element from a list.&nbsp;&nbsp;&nbsp;*Return the list and the removed element in a Tuple. Elements are numbered from 0.*
 
-    removeAt(1, List('a, 'b, 'c, 'd))
-    (List[Symbol], Symbol) = (List('a, 'c, 'd),'b)
+        removeAt(1, List('a, 'b, 'c, 'd))
+        (List[Symbol], Symbol) = (List('a, 'c, 'd),'b)
